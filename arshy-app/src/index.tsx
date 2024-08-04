@@ -10,7 +10,8 @@ import './index.css';
 // import Contact from './templates/contact/Contact';
 // import ContactGroup from './components/contents/contactGroup/ContactGroup';
 // import HistoryGroup from './components/contents/historyGroup/HistoryGroup';
-import ProjectTitle from './components/contents/projectTitle/ProjectTitle';
+// import ProjectTitle from './components/contents/projectTitle/ProjectTitle';
+import ProjectInfo from './components/contents/projectInfo/ProjectInfo';
 // import CheckboxGroup, { ChkItemProps } from './components/basic/checkboxGroup/CheckboxGroup';
 // import RadioGroup, { RadioItemProps } from './components/basic/radioGroup/RadioGroup';
 // import { ui } from 'assets/style';
@@ -24,16 +25,11 @@ root.render(
       <Intro isAniActive></Intro>
     </Wrapper> */}
     {/* <div style={{ background: '#01d3ce' }}> */}
-      <ProjectTitle
-        titleType="thumb"
-        title="프로젝트 썸네일 타이틀"
-        summary="프로젝트 썸네일 개요를 입력하세요"
-      />
-      <ProjectTitle
-        titleType="popup"
-        title="프로젝트 팝업 타이틀"
-        summary="프로젝트 팝업 개요를 입력하세요"
-      />
+    <ProjectInfo
+      infoType="thumb"
+      title="프로젝트 썸네일 정보 타이틀"
+      desc="프로젝트 썸네일 정보 내용을 입력하세요"
+    />
     {/* </div> */}
   </React.StrictMode>,
 );
