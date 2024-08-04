@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { StyledProjectTitle, StyledProjectSummarry } from './StyledProjectTitle';
+import { StyledProjectTitle, StyledProjectSummary } from './StyledProjectTitle';
 
 export interface ExportProjectTitleProps {
   titleType: 'thumb' | 'popup';
@@ -10,7 +10,7 @@ export interface ProjectTitleProps extends ExportProjectTitleProps {
   summary?: string;
 }
 /**
- * ## [Storybook](http://arshy-gray.github.io/?path=/story/components-contents-contactgroup--contact-group)
+ * ## [Storybook](http://arshy-gray.github.io/?path=/story/components-contents-projecttitle--popup)
  *
  * ## Props
  *
@@ -18,7 +18,7 @@ export interface ProjectTitleProps extends ExportProjectTitleProps {
  *
  * | props | type | value | description |
  * | :--- | :--- | :--- | :--- |
- * | * titleType | 'thumbList', 'popup' | - | 타이틀 타입 |
+ * | * titleType | 'thumb', 'popup' | - | 타이틀 타입 |
  * | * title | string | - | 프로젝트 타이틀 |
  * | summary | string | - | 프로젝트 개요 |
  */
@@ -30,14 +30,14 @@ const ProjectTitle = forwardRef<HTMLHeadingElement, ProjectTitleProps>(
         <StyledProjectTitle $titleType={titleType} className="project_title" ref={ref} {...rest}>
           {title}
         </StyledProjectTitle>
-        <StyledProjectSummarry
+        <StyledProjectSummary
           $titleType={titleType}
           className="project_summary"
           ref={ref}
           {...rest}
         >
           {summary}
-        </StyledProjectSummarry>
+        </StyledProjectSummary>
       </>
     );
   },

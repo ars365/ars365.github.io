@@ -6,7 +6,7 @@ export interface StyledProjectTitleProps {
 }
 
 const popLineHeight = `line-height: 1.2;`;
-const titLineHeight = `line-height: 1.3;`;
+const thumbLineHeight = `line-height: 1.3;`;
 
 const CssTitle = (titType: string) => {
   switch (titType) {
@@ -17,7 +17,7 @@ const CssTitle = (titType: string) => {
     case 'thumb':
     default:
       return css`
-        ${ui.font('22px', titLineHeight)}
+        ${ui.font('22px', thumbLineHeight)}
       `;
   }
 };
@@ -42,7 +42,7 @@ export const StyledProjectTitle = styled.h4<StyledProjectTitleProps>`
   ${(props) => CssTitle(props.$titleType)}
 `;
 
-export const StyledProjectSummarry = styled.p<StyledProjectTitleProps>`
+export const StyledProjectSummary = styled.p<StyledProjectTitleProps>`
   margin-top: 5px;
   ${(props) => CssSummary(props.$titleType)}
 `;
