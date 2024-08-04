@@ -1,15 +1,15 @@
 import styled, { css } from 'styled-components';
 import { ui } from '../../../assets/style';
 
-export interface StyledProjectTitleProps {
-  $titleType: string;
+export interface StyledProjectInfoProps {
+  $infoType: string;
 }
 
-const popLineHeight = `line-height: 1.2;`;
+const popLineHeight = `line-height: 1.5;`;
 const thumbLineHeight = `line-height: 1.3;`;
 
-const CssTitle = (titType: string) => {
-  switch (titType) {
+const CssTitle = (infoType: string) => {
+  switch (infoType) {
     case 'popup':
       return css`
         ${ui.font('35px', popLineHeight)}
@@ -22,8 +22,8 @@ const CssTitle = (titType: string) => {
   }
 };
 
-const CssSummary = (titType: string) => {
-  switch (titType) {
+const CssDesc = (infoType: string) => {
+  switch (infoType) {
     case 'popup':
       return css`
         ${ui.font('17px', popLineHeight, ui.color.dft.medium)}
@@ -36,13 +36,13 @@ const CssSummary = (titType: string) => {
   }
 };
 
-export const StyledProjectTitle = styled.h4<StyledProjectTitleProps>`
+export const StyledProjectInfoTitle = styled.h4<StyledProjectInfoProps>`
   color: ${ui.color.dft.dark};
   font-weight: bold;
-  ${(props) => CssTitle(props.$titleType)}
+  ${(props) => CssTitle(props.$infoType)}
 `;
 
-export const StyledProjectSummary = styled.p<StyledProjectTitleProps>`
+export const StyledProjectInfoDesc = styled.p<StyledProjectInfoProps>`
   margin-top: 5px;
-  ${(props) => CssSummary(props.$titleType)}
+  ${(props) => CssDesc(props.$infoType)}
 `;
